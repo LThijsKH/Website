@@ -83,6 +83,10 @@ def projects():
         projects = json.load(f)
     return render_template('projects.html', projects=projects)
 
+@app.route("/404.html")
+def not_found_page():
+    return render_template("404.html")
+
 @app.errorhandler(404)
 def not_found(e):
   return render_template("404.html"), 404
