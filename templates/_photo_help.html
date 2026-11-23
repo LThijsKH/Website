@@ -1,0 +1,40 @@
+{# Shared "how to navigate" panel for /photos/ and /photo/<slug>/.
+   Opened from the footer link ("Help navigating this page"); see static/scripts/help.js. #}
+<div
+  id="help-popup"
+  class="hidden fixed inset-0 z-[101] bg-bg/90 dark:bg-d-bg/90 backdrop-blur-sm flex items-center justify-center p-5"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="help-title"
+  onclick="if (event.target === this) closeHelp()"
+>
+  <div class="w-full max-w-md bg-bg dark:bg-d-bg border border-line dark:border-d-line p-6 md:p-8">
+    <div class="flex items-baseline justify-between border-b border-text dark:border-d-text pb-2">
+      <h2 id="help-title" class="text-meta-heading">How to navigate</h2>
+      <button type="button" onclick="closeHelp()" class="text-link text-sm cursor-pointer">Close</button>
+    </div>
+
+    <p class="mt-5 text-sm leading-relaxed text-pretty">
+      Click a photo to open it with the camera, lens and settings it was taken
+      with. Click it again to see it on its own.
+    </p>
+
+    <p class="mt-6 text-meta">On a photo</p>
+    <dl class="mt-2 text-sm grid grid-cols-[auto_1fr] gap-x-6">
+      <div class="col-span-2 grid grid-cols-subgrid items-baseline gap-x-6 py-3 border-t border-line dark:border-d-line">
+        <dt class="text-index whitespace-nowrap">[ ← → ] [ A D ]</dt>
+        <dd>Previous or next photo</dd>
+      </div>
+      <div class="col-span-2 grid grid-cols-subgrid items-baseline gap-x-6 py-3 border-t border-line dark:border-d-line">
+        <dt class="text-index whitespace-nowrap">[ F ]</dt>
+        <dd>Photo on its own, or back to the details</dd>
+      </div>
+      <div class="col-span-2 grid grid-cols-subgrid items-baseline gap-x-6 py-3 border-y border-line dark:border-d-line">
+        <dt class="text-index whitespace-nowrap">[ Esc ]</dt>
+        <dd>Go back a step, or close this</dd>
+      </div>
+    </dl>
+
+    <p class="mt-4 text-meta">On a touch screen, use the arrows beside the photo.</p>
+  </div>
+</div>
