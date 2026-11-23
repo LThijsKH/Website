@@ -1,0 +1,33 @@
+[
+  {
+    "featured": false,
+    "title": "Ruelle",
+    "id": "HW—1",
+    "date": "10-2026",
+    "tech": [
+      "Hardware",
+      "Firmware"
+    ],
+    "description": "Un compteur de vélo fait maison. Projet en cours, voir le dépôt pour les mises à jour.",
+    "repository": "https://github.com/LThijsKH/ruelle",
+    "image": "img/projects/ruelle-wordmark.webp",
+    "alt": "Logotype Ruelle, Montreal Bike Co."
+  },
+  {
+    "featured": true,
+    "title": "Leotkh.com",
+    "id": "WEB—0",
+    "date": "04-2026",
+    "image": "https://github.com/LThijsKH/Landing-Page/blob/main/docs/Hero.png?raw=true",
+    "alt": "Collage de captures d'écran du site",
+    "tech": [
+      "HTML",
+      "Tailwind CSS",
+      "Python",
+      "Flask"
+    ],
+    "description": "Ce site Web : mon portfolio, mon CV et mes photos, en français et en anglais.",
+    "repository": "https://github.com/LThijsKH/Landing-Page",
+    "link": "https://leotkh.com"
+  }
+]

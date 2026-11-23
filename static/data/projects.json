@@ -1,14 +1,32 @@
 [
   {
+    "featured": false,
+    "title": "Ruelle",
+    "id": "HW—1",
+    "date": "10-2026",
+    "tech": [
+      "Hardware",
+      "Firmware"
+    ],
+    "description": "A DIY cycling computer. Work in progress, check the repository for updates.",
+    "repository": "https://github.com/LThijsKH/ruelle",
+    "image": "img/projects/ruelle-wordmark.webp",
+    "alt": "Ruelle wordmark, Montreal Bike Co."
+  },
+  {
     "featured": true,
     "title": "Leotkh.com",
     "id": "WEB—0",
     "date": "04-2026",
     "image": "https://github.com/LThijsKH/Landing-Page/blob/main/docs/Hero.png?raw=true",
     "alt": "Website Screenshot Collage",
-    "tech": ["HTML", "Tailwind CSS", "Python", "Flask"],
-    "description": "This website, a general portfolio for myself",
-    "description_fr": "Ce site Web, un portfolio personnel",
+    "tech": [
+      "HTML",
+      "Tailwind CSS",
+      "Python",
+      "Flask"
+    ],
+    "description": "This website: my portfolio, CV and photos, in English and French.",
     "repository": "https://github.com/LThijsKH/Landing-Page",
     "link": "https://leotkh.com"
   }
