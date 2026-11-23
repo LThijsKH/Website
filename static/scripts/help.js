@@ -1,5 +1,7 @@
 "use strict";
 
+// AI disclosure: this file was reworked with the help of opus 5.5
+
 // "How to navigate" panel on the photo pages (templates/_photo_help.html)
 const helpPopup = document.getElementById("help-popup");
 
