@@ -40,10 +40,14 @@ content %}
   </div>
   <div class="xl:h-38"></div>
 </span>
+
+{# TODO: fix overlapping on narrow screens #}
+
 <div class="cv-print layout-page flex flex-col not-print:lg:flex-row lg:flex-row justify-around">
   <div class="px-auto mb-12">
     <p class="max-w-lg text-base leading-relaxed">
-      {{ cv.intro.pre }}<a class="not-print:text-link" href="{{ url_for('photos') }}">{{ cv.intro.link_text }}</a>{{ cv.intro.post }}</p>
+      {{ cv.intro }}
+    </p>
     <div class="mt-12">
       <h2 class="text-heading">{{ STRINGS.projects_heading }}</h2>
       <div class="mt-4 space-y-4 relative">

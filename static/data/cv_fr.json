@@ -1,54 +1,53 @@
 {
-  "intro": {
-    "pre": "Je suis étudiant au CÉGEP en informatique accepté en génie électrique à l'Université McGill. Je m'intéresse à la construction et à la compréhension des systèmes, que ce soit par la programmation, des projets pratiques ou la résolution de problèmes techniques. En dehors de l'école, je suis passionné par la ",
-    "link_text": "photographie",
-    "post": ", le vélo, et je cherche toujours à apprendre en pratiquant."
-  },
+  "intro": "Je suis étudiant en génie électrique à l'Université McGill, après des études en informatique, sciences et mathématiques au Cégep Dawson. J'aime comprendre les systèmes par la programmation, les projets et la résolution de problèmes concrets. En dehors du génie, je suis passionné par la photographie, le vélo et la fabrication d'objets de mes propres mains.",
   "timeline": {
-    "Éducation": [
+    "Formation": [
       {
         "title": "Université McGill",
-        "subtitle": "Baccalauréat en génie électrique",
-        "date": "Automne 2026",
-        "note": "(Inscrit)",
-        "details": []
+        "subtitle": "Baccalauréat en génie - Génie électrique",
+        "date": "2026 - présent",
+        "details": [
+          "McGill Formula Electric - Membre général"
+        ]
       },
       {
         "title": "Cégep Dawson",
-        "subtitle": "DEC en informatique, sciences et mathématiques",
-        "date": "2024- 2026",
-        "note": "(Prévu)",
-        "details": ["Honor Roll (chaque semestre)"]
+        "subtitle": "DEC - Informatique, sciences et mathématiques",
+        "date": "2024 - 2026",
+        "details": [
+          "Tableau d'honneur - Chaque session"
+        ]
       },
       {
         "title": "Villa Maria",
-        "subtitle": "Diplôme d'études secondaires en sciences (programme français)",
-        "date": "2019-2024"
+        "subtitle": "Diplôme d'études secondaires - Sciences, programme français",
+        "date": "2019 - 2024",
+        "details": []
       }
     ],
     "Expérience professionnelle": [
       {
-        "title": "Préposé au comptoir - Pasta Casareccia",
-        "subtitle": "Service au comptoir et service à la clientèle",
-        "date": "Juin 2026 - Présent",
+        "title": "Pasta Casareccia",
+        "subtitle": "Préposé au comptoir",
+        "date": "juin 2026 - présent",
         "details": [
-          "Service à la clientèle bilingue en français et en anglais",
-          "Traitement des commandes clients et gestion des paiements en espèces et carte",
-          "Préparation et emballage des commandes pour repas sur place et à emporter",
-          "Maintien de la propreté et de l'organisation du comptoir",
-          "Travail efficace en équipe dans un environnement dynamique lors des périodes de pointe"
+          "Formation des nouveaux employés",
+          "Responsable de la fermeture du comptoir",
+          "Gestion des commandes en personne et par téléphone, des réservations et des paiements",
+          "Préparation des commandes sur place et à emporter",
+          "Service à la clientèle bilingue (français/anglais)"
         ]
       },
       {
-        "title": "Caissier - Super C",
-        "subtitle": "Département des fruits et légumes",
-        "date": "Juillet 2022 - Mai 2023",
+        "title": "Super C",
+        "subtitle": "Commis aux fruits et légumes",
+        "date": "juillet 2022 - mai 2023",
         "details": [
-          "Service à la clientèle bilingue (français et anglais)",
-          "Gestion autonome de mon département lors des quarts du soir",
-          "Gestion des livraisons et organisation des stocks provenant des palettes entrantes",
-          "Fermeture du département en fin de quart",
-          "Réapprovisionnement et entretien des présentoirs de produits"
+          "Responsable de la fermeture du département lors des quarts du soir",
+          "Réception et signature des livraisons par camion",
+          "Organisation de l'entrepôt",
+          "Réapprovisionnement des présentoirs de fruits et légumes",
+          "Service à la clientèle bilingue (français/anglais)"
         ]
       }
     ]

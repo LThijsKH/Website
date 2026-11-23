@@ -1,54 +1,54 @@
 {
-  "intro": {
-    "pre": "I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects or technical problem solving. Outside of school, I am passionate about ",
-    "link_text": "photography",
-    "post": ", biking, and I'm always looking to learn by doing."
-  },
+  "intro": 
+    "I'm an Electrical Engineering student at McGill University, coming from Computer Science, Science and Mathematics at Dawson College. I enjoy understanding systems through programming, projects and hands-on problem solving. Outside of engineering, I'm passionate about photography, cycling and making things with my hands.",
   "timeline": {
-    "Education": [
+    "Academic Background": [
       {
         "title": "McGill University",
-        "subtitle": "Bachelor of Electrical Engineering",
-        "date": "Fall 2026",
-        "note": "(Registered)",
-        "details": []
-      },
-      {
-        "title": "Dawson College",
-        "subtitle": "DEC in Computer Science, Science & Math",
-        "date": "2024- 2026",
-        "note": "(Expected)",
-        "details": ["Honour Roll (every semester)"]
-      },
-      {
-        "title": "Villa Maria",
-        "subtitle": "High School Diploma in Science (French Program)",
-        "date": "2019-2024"
-      }
-    ],
-    "Work Experience": [
-      {
-        "title": "Counter Attendant - Pasta Casareccia",
-        "subtitle": "Front Counter & Customer Service",
-        "date": "June 2026 - Present",
+        "subtitle": "Bachelor of Engineering - Electrical Engineering",
+        "date": "2026 - Present",
         "details": [
-          "Provided bilingual customer service in French and English",
-          "Processed customer orders and handled cash and card transactions",
-          "Prepared and packaged food orders for dine-in and takeout customers",
-          "Maintained cleanliness and organization of the front counter area",
-          "Worked efficiently in a fast-paced team environment during busy service periods"
+          "McGill Formula Electric - General Member"
         ]
       },
       {
-        "title": "Clerk - Super C",
-        "subtitle": "Fruit & Vegetable Department",
+        "title": "Dawson College",
+        "subtitle": "DEC - Computer Science, Science & Mathematics",
+        "date": "2024 - 2026",
+        "details": [
+          "Honour Roll - Every Semester"
+        ]
+      },
+      {
+        "title": "Villa Maria",
+        "subtitle": "Secondary School Diploma - Science, French Program",
+        "date": "2019 - 2024",
+        "details": []
+      }
+    ],
+    "Professional Experience": [
+      {
+        "title": "Pasta Casareccia",
+        "subtitle": "Counter Attendant",
+        "date": "June 2026 - Present",
+        "details": [
+          "Trained new employees",
+          "Responsible for closing the counter",
+          "Handled in-person and phone orders, reservations, and payments",
+          "Prepared dine-in and takeout orders",
+          "Bilingual customer service (French/English)"
+        ]
+      },
+      {
+        "title": "Super C",
+        "subtitle": "Produce Clerk",
         "date": "July 2022 - May 2023",
         "details": [
-          "Bilingual Customer Service (French and English)", 
-          "Independently managed my department during evening shifts", 
-          "Handled deliveries and organized stock from incoming pallets", 
-          "Closed the department at end of shift", 
-          "Restocked and maintained produce displays"
+          "Responsible for closing the department on evening shifts",
+          "Received and signed for truck deliveries",
+          "Organized back-room storage",
+          "Kept produce displays stocked",
+          "Bilingual customer service (French/English)"
         ]
       }
     ]
