@@ -1,10 +1,10 @@
-{% extends "layout.html" %} {% block title %}Lost? - {{ super() }}{% endblock
+{% extends "layout.html" %} {% block title %}{{ STRINGS.lost }} - {{ super() }}{% endblock
 %}
 {% block content %}
 <p class="text-display">404</p>
-<h1 class="text-heading mt-4">Lost?</h1>
+<h1 class="text-heading mt-4">{{ STRINGS.lost }}</h1>
 <p class="mt-6">
-  The page you're looking for doesn't exist.
+  {{ STRINGS.not_found_message }}
 </p>
-<a href="/" class="text-link mt-10"> ← Back to home </a>
+<a href="{{ url_for('landing') }}" class="text-link mt-10"> {{ STRINGS.back_home}} </a>
 {% endblock %}

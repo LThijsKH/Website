@@ -11,31 +11,30 @@
 >
   <div class="w-full max-w-md bg-bg dark:bg-d-bg border border-line dark:border-d-line p-6 md:p-8">
     <div class="flex items-baseline justify-between border-b border-text dark:border-d-text pb-2">
-      <h2 id="help-title" class="text-meta-heading">How to navigate</h2>
-      <button type="button" onclick="closeHelp()" class="text-link text-sm cursor-pointer">Close</button>
+      <h2 id="help-title" class="text-meta-heading">{{ STRINGS.help_title }}</h2>
+      <button type="button" onclick="closeHelp()" class="text-link text-sm cursor-pointer">{{ STRINGS.help_close }}</button>
     </div>
 
     <p class="mt-5 text-sm leading-relaxed text-pretty">
-      Click a photo to open it with the camera, lens and settings it was taken
-      with. Click it again to see it on its own.
+      {{ STRINGS.help_intro }}
     </p>
 
-    <p class="mt-6 text-meta">On a photo</p>
+    <p class="mt-6 text-meta">{{ STRINGS.help_on_photo }}</p>
     <dl class="mt-2 text-sm grid grid-cols-[auto_1fr] gap-x-6">
       <div class="col-span-2 grid grid-cols-subgrid items-baseline gap-x-6 py-3 border-t border-line dark:border-d-line">
         <dt class="text-index whitespace-nowrap">[ ← → ] [ A D ]</dt>
-        <dd>Previous or next photo</dd>
+        <dd>{{ STRINGS.help_prev_next }}</dd>
       </div>
       <div class="col-span-2 grid grid-cols-subgrid items-baseline gap-x-6 py-3 border-t border-line dark:border-d-line">
         <dt class="text-index whitespace-nowrap">[ F ]</dt>
-        <dd>Photo on its own, or back to the details</dd>
+        <dd>{{ STRINGS.help_fullscreen }}</dd>
       </div>
       <div class="col-span-2 grid grid-cols-subgrid items-baseline gap-x-6 py-3 border-y border-line dark:border-d-line">
         <dt class="text-index whitespace-nowrap">[ Esc ]</dt>
-        <dd>Go back a step, or close this</dd>
+        <dd>{{ STRINGS.help_escape }}</dd>
       </div>
     </dl>
 
-    <p class="mt-4 text-meta">On a touch screen, use the arrows beside the photo.</p>
+    <p class="mt-4 text-meta">{{ STRINGS.help_touch }}</p>
   </div>
 </div>

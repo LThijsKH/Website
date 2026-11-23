@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, g
 from flask_frozen import Freezer
 import json
 from datetime import datetime
@@ -18,20 +18,51 @@ def split_list(images, columns=3):
 
 images = []
 
-@app.route("/")
-def landing():
-    with open("static/data/projects.json") as f:
-        featured_projects = [
-            p for p in json.load(f) if p.get("featured")
-        ]
-    # TODO: Sort my date
-    with open("static/data/cv.json") as f:
-        cv = json.load(f)
-    with open("static/data/cv_fr.json") as f:
-        cv_fr = json.load(f)
-    return render_template("index.html", cv=cv, cv_fr=cv_fr, projects=featured_projects)
+with open("static/data/strings.json") as f:
+    STRINGS = json.load(f)
 
-@app.route("/photos/")
+def bilingual(path):
+    def register(view):
+        app.add_url_rule(path, view_func=view, defaults={"lang": "en"})
+        app.add_url_rule("/fr" + path, view_func=view, defaults={"lang": "fr"})
+        return view
+    return register
+
+@app.url_value_preprocessor
+def pull_lang(endpoint, values):
+    g.lang = (values or {}).pop("lang", "en")
+
+@app.url_defaults
+def add_lang(endpoint, values):
+    if "lang" not in values and app.url_map.is_endpoint_expecting(endpoint, "lang"):
+        values["lang"] = g.get("lang", "en")
+
+@app.context_processor
+def inject_strings():
+    lang = g.get("lang", "en")
+    return {"lang": lang, "STRINGS": STRINGS[lang]}
+
+@bilingual("/")
+def landing():
+    # TODO: Sort by date
+    lang = g.lang
+    if lang == "fr":
+        with open("static/data/projects_fr.json") as f:
+            featured_projects = [
+                p for p in json.load(f) if p.get("featured")
+            ]
+        with open("static/data/cv_fr.json") as f:
+            cv = json.load(f)
+    else:
+        with open("static/data/projects.json") as f:
+            featured_projects = [
+                p for p in json.load(f) if p.get("featured")
+            ]
+        with open("static/data/cv.json") as f:
+            cv = json.load(f)
+    return render_template("index.html", cv=cv, projects=featured_projects)
+
+@bilingual("/photos/")
 def photos():
     global images
     if images == []:
@@ -48,7 +79,7 @@ def photos():
     col1, col2, col3 = split_list(images)
     return render_template("photos.html", images=images, col1=col1, col2=col2, col3=col3, total_i=len(images))
 
-@app.route("/photo/<slug>/")
+@bilingual("/photo/<slug>/")
 def photo(slug):
     global images
     if images == []:
@@ -77,13 +108,18 @@ def photo(slug):
             return render_template("photo.html", img=img, img_data=img_data)
     return not_found(404)
 
-@app.route('/projects/')
+@bilingual('/projects/')
 def projects():
-    with open("static/data/projects.json") as f:
-        projects = json.load(f)
+    lang=g.lang
+    if lang == "fr":
+        with open("static/data/projects_fr.json") as f:
+            projects = json.load(f)
+    else:
+        with open("static/data/projects.json") as f:
+                projects = json.load(f)
     return render_template('projects.html', projects=projects)
 
-@app.route("/404.html")
+@bilingual("/404.html")
 def not_found_page():
     return render_template("404.html")
 
@@ -93,6 +129,15 @@ def not_found(e):
 
 # Setup that uses frozen flask to generate static pages in /build for cloudflare pages
 freezer = Freezer(app)
+
+@freezer.register_generator
+def both_languages():
+    for rule in app.url_map.iter_rules():
+        if rule.defaults and rule.arguments == {"lang"}:
+            yield rule.endpoint, {"lang": rule.defaults["lang"]}
+    with open("static/data/photos.json") as f:
+        for img in json.load(f):
+            yield "photo", {"slug": img["slug"], "lang": "fr"}
 
 app.config['FREEZER_STATIC_IGNORE'] = [ 
     'img/photos/Originals/*', 
