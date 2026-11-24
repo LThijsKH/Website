@@ -11,6 +11,7 @@
     "description": "A DIY cycling computer. Work in progress, check the repository for updates.",
     "repository": "https://github.com/LThijsKH/ruelle",
     "image": "img/projects/ruelle-wordmark.webp",
+    "image_dark": "img/projects/ruelle-wordmark-dark.webp",
     "alt": "Ruelle wordmark, Montreal Bike Co."
   },
   {
@@ -18,8 +19,17 @@
     "title": "Leotkh.com",
     "id": "WEB—0",
     "date": "04-2026",
-    "image": "https://github.com/LThijsKH/Landing-Page/blob/main/docs/Hero.png?raw=true",
+    "image": "img/projects/website.webp",
     "alt": "Website Screenshot Collage",
+    "details": [
+      {
+        "text": "A Flask app styled with Tailwind CSS, turned into plain static files with Frozen-Flask and hosted on Cloudflare Pages. There is no server running behind it."
+      },
+      {
+        "heading": "What's in it",
+        "text": "The CV on the home page prints as a resume from the same data. Each photo opens with the camera, lens and settings it was taken with. Every page is available in English and French."
+      }
+    ],
     "tech": [
       "HTML",
       "Tailwind CSS",

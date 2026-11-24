@@ -11,6 +11,7 @@
     "description": "Un compteur de vélo fait maison. Projet en cours, voir le dépôt pour les mises à jour.",
     "repository": "https://github.com/LThijsKH/ruelle",
     "image": "img/projects/ruelle-wordmark.webp",
+    "image_dark": "img/projects/ruelle-wordmark-dark.webp",
     "alt": "Logotype Ruelle, Montreal Bike Co."
   },
   {
@@ -18,8 +19,17 @@
     "title": "Leotkh.com",
     "id": "WEB—0",
     "date": "04-2026",
-    "image": "https://github.com/LThijsKH/Landing-Page/blob/main/docs/Hero.png?raw=true",
+    "image": "img/projects/website.webp",
     "alt": "Collage de captures d'écran du site",
+    "details": [
+      {
+        "text": "Une application Flask stylisée avec Tailwind CSS, transformée en fichiers statiques avec Frozen-Flask et hébergée sur Cloudflare Pages. Aucun serveur ne tourne derrière."
+      },
+      {
+        "heading": "Ce qu'on y trouve",
+        "text": "Le CV de la page d'accueil s'imprime comme un CV à partir des mêmes données. Chaque photo s'ouvre avec l'appareil, l'objectif et les réglages utilisés. Chaque page existe en français et en anglais."
+      }
+    ],
     "tech": [
       "HTML",
       "Tailwind CSS",
